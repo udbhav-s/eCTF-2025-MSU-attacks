@@ -6,7 +6,7 @@
 set -eo pipefail
 
 rm -f frames.json
-rm -f "pesky_ngm_$1.zip"
+rm -f "*.zip"
 rm -f pirated.sub
 
 cp $2/pirated.sub pirated.sub
