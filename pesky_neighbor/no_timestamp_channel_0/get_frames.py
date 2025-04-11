@@ -31,7 +31,7 @@ async def retrieve_frames(team: str):
 
     assert ch0_frame2["timestamp"] > ch0_frame1["timestamp"]
 
-    content = json.dumps({"ch0_frame2": ch0_frame1, "ch0_fram1": ch0_frame2})
+    content = json.dumps({"ch0_frame2": ch0_frame2, "ch0_frame1": ch0_frame1})
 
     with open("frames.json", "w") as file:
         file.write(content)

@@ -7,4 +7,4 @@ rm -f *.zip
 
 python3 get_frames.py -t "$1"
 
-zip -r "pesky_ngm_$1.zip" pesky_neighbor.py setup.sh frames.json
+zip -r "pesky_ntc0_$1.zip" pesky_neighbor.py setup.sh frames.json

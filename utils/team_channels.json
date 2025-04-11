@@ -26,5 +26,29 @@
     "CAT": {
         "host": "34.235.112.89",
         "base_port": 2550
+    },
+    "MorganState": {
+        "host": "54.86.219.63",
+        "base_port": 2750
+    },
+    "UCI": {
+        "host": "54.86.219.63",
+        "base_port": 2300
+    },
+    "GT1": {
+        "host": "54.86.219.63",
+        "base_port": 2125
+    },
+    "UCCS1": {
+        "host": "54.86.219.63",
+        "base_port": 2600
+    },
+    "UCSC": {
+        "host": "54.86.219.63",
+        "base_port": 2650
+    },
+    "UMASS": {
+        "host": "54.86.219.63",
+        "base_port": 2075
     }
 }
