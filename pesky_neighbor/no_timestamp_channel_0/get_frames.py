@@ -21,17 +21,17 @@ async def retrieve_frames(team: str):
     ch0_port = team_info["base_port"]
 
     # Get a channel 1 frame
-    ch1_frame = await get_frame(host, ch0_port)
+    ch0_frame1 = await get_frame(host, ch0_port)
 
     # Wait for a bit
     await asyncio.sleep(0.5)
 
     # Get a later channel 0 frame
-    ch0_frame = await get_frame(host, ch0_port)
+    ch0_frame2 = await get_frame(host, ch0_port)
 
-    assert ch0_frame["timestamp"] > ch1_frame["timestamp"]
+    assert ch0_frame2["timestamp"] > ch0_frame1["timestamp"]
 
-    content = json.dumps({"ch0_frame": ch0_frame, "ch1_frame": ch1_frame})
+    content = json.dumps({"ch0_frame2": ch0_frame1, "ch0_fram1": ch0_frame2})
 
     with open("frames.json", "w") as file:
         file.write(content)
