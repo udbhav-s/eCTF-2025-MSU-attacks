@@ -1,5 +1,5 @@
 Attack - Binghamton
-  --> | Name: Pesky Neighbor - Binghamton        | Value: 1090 | Solves: 26 | <solved> | 
+  --> | Name: Pesky Neighbor - Binghamton        | Value: 1090 | Solves: 26 | <solved> | We frame this attack in terms of our ATTACK-1 Type Juggling vulnerability, which allows a signed subscription package to be passed as an accepted frame or vice versa. In this case, we listened to the satellite to collect a channel 0 frame, read the bytes of the pirated subscription package, then sent `decoder.decode(bytes.fromhex(ch0_frame["encoded"])[:-16] + pirated[:16])`. The decoder accepts and decodes this as a valid channel 0 frame, resulting in the Pesky Neighbor flag capture.
 Attack - CA
   --> | Name: Pesky Neighbor - CA                | Value: 508  | Solves: 28 | <solved> | 
 Attack - CAT
@@ -20,7 +20,7 @@ Attack - GT1
 Attack - MorganState
   --> | Name: Pesky Neighbor - MorganState       | Value: 508  | Solves: 22 | <solved> | 
 Attack - NEU1
-  --> | Name: Pesky Neighbor - NEU1              | Value: 1046 | Solves: 18 | <solved> | 
+  --> | Name: Pesky Neighbor - NEU1              | Value: 1046 | Solves: 18 | <solved> | Similar to our own design, NEU1 interpreted the rules as meaning that timestamps should be monotonically increasing *for each channel*. If you watch a golfer on one channel begin his swing, then flip to a boxing channel and see a boxer do a punch, and then turn to the golf channel, then you've missed his golf swing and are not allowed to watch it now, according to the intended interpretation of the rules. Therefore, we captured this flag by collecting from the satellite an early channel 1 frame and a later channel 0 frame, then playing them back in reverse order on the board to capture Pesky Neighbor with ATTACK-11 Per-Channel Monotonic Validation.
 Attack - NEU2
   --> | Name: Expired Subscription - NEU2        | Value: 508  | Solves: 27 | <solved> | 
   --> | Name: Pirated Subscription - NEU2        | Value: 508  | Solves: 23 | <solved> | 
@@ -28,13 +28,13 @@ Attack - NEU2
   --> | Name: Recording Playback - NEU2          | Value: 508  | Solves: 25 | <solved> | 
   --> | Name: Pesky Neighbor - NEU2              | Value: 508  | Solves: 27 | <solved> | 
 Attack - NYIT
-  --> | Name: Pesky Neighbor - NYIT              | Value: 508  | Solves: 26 | <solved> | 
+  --> | Name: Pesky Neighbor - NYIT              | Value: 508  | Solves: 26 | <solved> | There is no validation of monotonicity for channel 0, so we simply recorded two channel 0 frame from the satellite and requested the pesky neighbor device to decode them in the reverse order, capturing the Pesky Neighbor flag.
 Attack - OC
-  --> | Name: Expired Subscription - OC          | Value: 500  | Solves: 26 | <solved> | 
-  --> | Name: Pirated Subscription - OC          | Value: 500  | Solves: 26 | <solved> | 
-  --> | Name: No Subscription - OC               | Value: 500  | Solves: 26 | <solved> | 
-  --> | Name: Recording Playback - OC            | Value: 500  | Solves: 26 | <solved> | 
-  --> | Name: Pesky Neighbor - OC                | Value: 508  | Solves: 15 | <solved> | 
+  --> | Name: Expired Subscription - OC          | Value: 500  | Solves: 26 | <solved> | We captured all 4 confidentiality flags of OC in the same manner. Based on ATTACK-4 Nonce/IV Reuse, we conducted a Multi-Time Pad attack against their re-used keystream. Because of channel 0's "noflagonthischan" appearing in place of the flag, we calculated "\0\0...\0\0noflagonthischan\0\0...\0\0" ^ chan_0_ct ^ chan_i_ct = "...chan_i_flag...".
+  --> | Name: Pirated Subscription - OC          | Value: 500  | Solves: 26 | <solved> | See above
+  --> | Name: No Subscription - OC               | Value: 500  | Solves: 26 | <solved> | See above
+  --> | Name: Recording Playback - OC            | Value: 500  | Solves: 26 | <solved> | See above
+  --> | Name: Pesky Neighbor - OC                | Value: 508  | Solves: 15 | <solved> | We captured this flag using the Forbidden Attack on GCM MAC, so called because anyone who implements GCM is forbidden to commit nonce reuse... yet here we are. Thus this falls under ATTACK-4, but allows us to compromise integrity rather than confidentiality. We do so using sagemath, as shown in sagemath_history.log. Sending a channel 1 frame as a channel 0 frame with a forged header and corresponding forged signature earns us the Pesky Neighbor flag.
 Attack - Parkway
   --> | Name: Pesky Neighbor - Parkway           | Value: 509  | Solves: 23 | <solved> | 
 Attack - Purdue2
@@ -46,7 +46,7 @@ Attack - SEMO
   --> | Name: Recording Playback - SEMO          | Value: 510  | Solves: 37 | <solved> | 
   --> | Name: Pesky Neighbor - SEMO              | Value: 1164 | Solves: 32 | <solved> | 
 Attack - Tufts
-  --> | Name: Pesky Neighbor - Tufts             | Value: 804  | Solves: 23 | <solved> | 
+  --> | Name: Pesky Neighbor - Tufts             | Value: 804  | Solves: 23 | <solved> | A channel 0 bypass is inappropriately though intentionally coded for the increasnig timestamp check. Therefore, we can capture this Pesky Neighbor flag by replaying a channel 0 frame after playing another frame with a later timestamp.
 Attack - UCCS1
   --> | Name: Pesky Neighbor - UCCS1             | Value: 508  | Solves: 20 | <solved> | 
 Attack - UCF
@@ -64,11 +64,11 @@ Attack - UMass
 Attack - UNHamp
   --> | Name: Pesky Neighbor - UNHamp            | Value: 508  | Solves: 22 | <solved> | 
 Attack - UNO
-  --> | Name: Pesky Neighbor - UNO               | Value: 1088 | Solves: 18 | <solved> | 
+  --> | Name: Pesky Neighbor - UNO               | Value: 1088 | Solves: 18 | <solved> | This flag was captured via ATTACK-16 Off-By-One Error in Timestamp Validation. The decoder had an off by one error, wrongly including the boundary when a newly observed timestamp is equal to a previously seen one as acceptable, when in fact this ought to be rejected as invalid. So, we captured this flag by replaying the exact same frame twice.
 Attack - USCGA
   --> | Name: Pesky Neighbor - USCGA             | Value: 508  | Solves: 29 | <solved> | 
 Attack - UTEP
-  --> | Name: Pirated Subscription - UTEP        | Value: 510  | Solves: 30 | <solved> | 
-  --> | Name: Pesky Neighbor - UTEP              | Value: 510  | Solves: 27 | <solved> | 
+  --> | Name: Pirated Subscription - UTEP        | Value: 510  | Solves: 30 | <solved> | We captured this flag using ATTACK-5 Pirated Subscription through Pesky Neighbor. This means that we sent a pesky neighbor submission zip, but instead of targeting the Pesky Neighbor flag, we used it to capture this confidentiality flag. We did so by first telling the decoder device to subscribe to the pirated subscription package, then sending it a frame from the associated channel which we sniffed from the satellite and getting the plaintext decoded output.
+  --> | Name: Pesky Neighbor - UTEP              | Value: 510  | Solves: 27 | <solved> | This flag was captured via ATTACK-16 Off-By-One Error in Timestamp Validation. The decoder had an off by one error, wrongly including the boundary when a newly observed timestamp is equal to a previously seen one as acceptable, when in fact this ought to be rejected as invalid. So, we captured this flag by replaying the exact same frame twice.
 Attack - Washington
-  --> | Name: Pesky Neighbor - Washington        | Value: 508  | Solves: 23 | <solved> | 
+  --> | Name: Pesky Neighbor - Washington        | Value: 508  | Solves: 23 | <solved> | We captured this flag by replaying frames in the wrong order, since there is no timestamp increasing validation. This is ATTACK-12.
