@@ -8,11 +8,11 @@ Attack - ERA
   --> | Name: Pirated Subscription - ERA         | Value: 530  | Solves: 37 | <solved> | 
   --> | Name: Pesky Neighbor - ERA               | Value: 1164 | Solves: 26 | <solved> | 
 Attack - ETSU
-  --> | Name: Expired Subscription - ETSU        | Value: 508  | Solves: 39 | <solved> | 
-  --> | Name: Pirated Subscription - ETSU        | Value: 508  | Solves: 39 | <solved> | 
-  --> | Name: No Subscription - ETSU             | Value: 508  | Solves: 39 | <solved> | 
-  --> | Name: Recording Playback - ETSU          | Value: 508  | Solves: 36 | <solved> | 
-  --> | Name: Pesky Neighbor - ETSU              | Value: 738  | Solves: 28 | <solved> | 
+  --> | Name: Expired Subscription - ETSU        | Value: 508  | Solves: 39 | <solved> | We solved all 4 confidentiality flags using this approach. We noticed that subscription package generation does not reference any secrets, and therefore we can forge arbitrary subscription packages. We created one for each channel which holds a confidentiality flag, and send them to the Pesky Neighbor victim along with a decode command for the corresponding frame we would like it to decode for us. This approach captures the confidentiality flags.
+  --> | Name: Pirated Subscription - ETSU        | Value: 508  | Solves: 39 | <solved> | See above
+  --> | Name: No Subscription - ETSU             | Value: 508  | Solves: 39 | <solved> | See above
+  --> | Name: Recording Playback - ETSU          | Value: 508  | Solves: 36 | <solved> | See above
+  --> | Name: Pesky Neighbor - ETSU              | Value: 738  | Solves: 28 | <solved> | Because the Pesky Neighbor device decodes frames for channels to which it ought not have access using the above attack, the Pesky Neighbor flag comes along for the ride. It is printed when we run the above attack.
 Attack - FIU
   --> | Name: Pesky Neighbor - FIU               | Value: 508  | Solves: 20 | <solved> | 
 Attack - GT1
