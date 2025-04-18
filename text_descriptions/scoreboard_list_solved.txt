@@ -1,0 +1,74 @@
+Attack - Binghamton
+  --> | Name: Pesky Neighbor - Binghamton        | Value: 1090 | Solves: 26 | <solved> | 
+Attack - CA
+  --> | Name: Pesky Neighbor - CA                | Value: 508  | Solves: 28 | <solved> | 
+Attack - CAT
+  --> | Name: Pesky Neighbor - CAT               | Value: 1164 | Solves: 21 | <solved> | 
+Attack - ERA
+  --> | Name: Pirated Subscription - ERA         | Value: 530  | Solves: 37 | <solved> | 
+  --> | Name: Pesky Neighbor - ERA               | Value: 1164 | Solves: 26 | <solved> | 
+Attack - ETSU
+  --> | Name: Expired Subscription - ETSU        | Value: 508  | Solves: 39 | <solved> | 
+  --> | Name: Pirated Subscription - ETSU        | Value: 508  | Solves: 39 | <solved> | 
+  --> | Name: No Subscription - ETSU             | Value: 508  | Solves: 39 | <solved> | 
+  --> | Name: Recording Playback - ETSU          | Value: 508  | Solves: 36 | <solved> | 
+  --> | Name: Pesky Neighbor - ETSU              | Value: 738  | Solves: 28 | <solved> | 
+Attack - FIU
+  --> | Name: Pesky Neighbor - FIU               | Value: 508  | Solves: 20 | <solved> | 
+Attack - GT1
+  --> | Name: Pesky Neighbor - GT1               | Value: 508  | Solves: 19 | <solved> | 
+Attack - MorganState
+  --> | Name: Pesky Neighbor - MorganState       | Value: 508  | Solves: 22 | <solved> | 
+Attack - NEU1
+  --> | Name: Pesky Neighbor - NEU1              | Value: 1046 | Solves: 18 | <solved> | 
+Attack - NEU2
+  --> | Name: Expired Subscription - NEU2        | Value: 508  | Solves: 27 | <solved> | 
+  --> | Name: Pirated Subscription - NEU2        | Value: 508  | Solves: 23 | <solved> | 
+  --> | Name: No Subscription - NEU2             | Value: 508  | Solves: 22 | <solved> | 
+  --> | Name: Recording Playback - NEU2          | Value: 508  | Solves: 25 | <solved> | 
+  --> | Name: Pesky Neighbor - NEU2              | Value: 508  | Solves: 27 | <solved> | 
+Attack - NYIT
+  --> | Name: Pesky Neighbor - NYIT              | Value: 508  | Solves: 26 | <solved> | 
+Attack - OC
+  --> | Name: Expired Subscription - OC          | Value: 500  | Solves: 26 | <solved> | 
+  --> | Name: Pirated Subscription - OC          | Value: 500  | Solves: 26 | <solved> | 
+  --> | Name: No Subscription - OC               | Value: 500  | Solves: 26 | <solved> | 
+  --> | Name: Recording Playback - OC            | Value: 500  | Solves: 26 | <solved> | 
+  --> | Name: Pesky Neighbor - OC                | Value: 508  | Solves: 15 | <solved> | 
+Attack - Parkway
+  --> | Name: Pesky Neighbor - Parkway           | Value: 509  | Solves: 23 | <solved> | 
+Attack - Purdue2
+  --> | Name: Pesky Neighbor - Purdue2           | Value: 508  | Solves: 18 | <solved> | 
+Attack - SEMO
+  --> | Name: Expired Subscription - SEMO        | Value: 510  | Solves: 39 | <solved> | 
+  --> | Name: Pirated Subscription - SEMO        | Value: 510  | Solves: 39 | <solved> | 
+  --> | Name: No Subscription - SEMO             | Value: 510  | Solves: 39 | <solved> | 
+  --> | Name: Recording Playback - SEMO          | Value: 510  | Solves: 37 | <solved> | 
+  --> | Name: Pesky Neighbor - SEMO              | Value: 1164 | Solves: 32 | <solved> | 
+Attack - Tufts
+  --> | Name: Pesky Neighbor - Tufts             | Value: 804  | Solves: 23 | <solved> | 
+Attack - UCCS1
+  --> | Name: Pesky Neighbor - UCCS1             | Value: 508  | Solves: 20 | <solved> | 
+Attack - UCF
+  --> | Name: Expired Subscription - UCF         | Value: 508  | Solves: 21 | <solved> | 
+  --> | Name: Pirated Subscription - UCF         | Value: 508  | Solves: 22 | <solved> | 
+  --> | Name: No Subscription - UCF              | Value: 508  | Solves: 19 | <solved> | 
+  --> | Name: Recording Playback - UCF           | Value: 508  | Solves: 22 | <solved> | 
+  --> | Name: Pesky Neighbor - UCF               | Value: 508  | Solves: 24 | <solved> | 
+Attack - UCI
+  --> | Name: Pesky Neighbor - UCI               | Value: 546  | Solves: 22 | <solved> | 
+Attack - UCSC
+  --> | Name: Pesky Neighbor - UCSC              | Value: 508  | Solves: 22 | <solved> | 
+Attack - UMass
+  --> | Name: Pesky Neighbor - UMass             | Value: 508  | Solves: 21 | <solved> | 
+Attack - UNHamp
+  --> | Name: Pesky Neighbor - UNHamp            | Value: 508  | Solves: 22 | <solved> | 
+Attack - UNO
+  --> | Name: Pesky Neighbor - UNO               | Value: 1088 | Solves: 18 | <solved> | 
+Attack - USCGA
+  --> | Name: Pesky Neighbor - USCGA             | Value: 508  | Solves: 29 | <solved> | 
+Attack - UTEP
+  --> | Name: Pirated Subscription - UTEP        | Value: 510  | Solves: 30 | <solved> | 
+  --> | Name: Pesky Neighbor - UTEP              | Value: 510  | Solves: 27 | <solved> | 
+Attack - Washington
+  --> | Name: Pesky Neighbor - Washington        | Value: 508  | Solves: 23 | <solved> | 
