@@ -40,11 +40,11 @@ Attack - Parkway
 Attack - Purdue2
   --> | Name: Pesky Neighbor - Purdue2           | Value: 508  | Solves: 18 | <solved> | 
 Attack - SEMO
-  --> | Name: Expired Subscription - SEMO        | Value: 510  | Solves: 39 | <solved> | 
-  --> | Name: Pirated Subscription - SEMO        | Value: 510  | Solves: 39 | <solved> | 
-  --> | Name: No Subscription - SEMO             | Value: 510  | Solves: 39 | <solved> | 
-  --> | Name: Recording Playback - SEMO          | Value: 510  | Solves: 37 | <solved> | 
-  --> | Name: Pesky Neighbor - SEMO              | Value: 1164 | Solves: 32 | <solved> | 
+  --> | Name: Expired Subscription - SEMO        | Value: 510  | Solves: 39 | <solved> | Due to hardcoded secrets, all confidentiality flags could be solved offline by decrypting them using the key.
+  --> | Name: Pirated Subscription - SEMO        | Value: 510  | Solves: 39 | <solved> | See above
+  --> | Name: No Subscription - SEMO             | Value: 510  | Solves: 39 | <solved> | See above
+  --> | Name: Recording Playback - SEMO          | Value: 510  | Solves: 37 | <solved> | See above
+  --> | Name: Pesky Neighbor - SEMO              | Value: 1164 | Solves: 32 | <solved> | With the keys known, we implemented encoder just like the actual design, and used this to encode an arbitrary valid frame, containing the message "Gib Flag Pls". The Pesky Neighbor victim must accept this valid encoded frame, and so we obtain the flag.
 Attack - Tufts
   --> | Name: Pesky Neighbor - Tufts             | Value: 804  | Solves: 23 | <solved> | A channel 0 bypass is inappropriately though intentionally coded for the increasnig timestamp check. Therefore, we can capture this Pesky Neighbor flag by replaying a channel 0 frame after playing another frame with a later timestamp.
 Attack - UCCS1
