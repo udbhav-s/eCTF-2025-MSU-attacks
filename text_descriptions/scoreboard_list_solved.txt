@@ -50,11 +50,11 @@ Attack - Tufts
 Attack - UCCS1
   --> | Name: Pesky Neighbor - UCCS1             | Value: 508  | Solves: 20 | <solved> | 
 Attack - UCF
-  --> | Name: Expired Subscription - UCF         | Value: 508  | Solves: 21 | <solved> | 
-  --> | Name: Pirated Subscription - UCF         | Value: 508  | Solves: 22 | <solved> | 
-  --> | Name: No Subscription - UCF              | Value: 508  | Solves: 19 | <solved> | 
-  --> | Name: Recording Playback - UCF           | Value: 508  | Solves: 22 | <solved> | 
-  --> | Name: Pesky Neighbor - UCF               | Value: 508  | Solves: 24 | <solved> | 
+  --> | Name: Expired Subscription - UCF         | Value: 508  | Solves: 21 | <solved> | See ../general/padding_oracle/padding_oracle.py
+  --> | Name: Pirated Subscription - UCF         | Value: 508  | Solves: 22 | <solved> | See above
+  --> | Name: No Subscription - UCF              | Value: 508  | Solves: 19 | <solved> | See above
+  --> | Name: Recording Playback - UCF           | Value: 508  | Solves: 22 | <solved> | See above
+  --> | Name: Pesky Neighbor - UCF               | Value: 508  | Solves: 24 | <solved> | See above
 Attack - UCI
   --> | Name: Pesky Neighbor - UCI               | Value: 546  | Solves: 22 | <solved> | 
 Attack - UCSC
